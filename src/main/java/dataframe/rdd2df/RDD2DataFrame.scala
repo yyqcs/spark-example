@@ -5,9 +5,8 @@ import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructT
 
 //read from origin data and store it  in MySql
 
-//object半生对象,scala，类型滞后。，存储过程 ;文件没有表土
-//D为对象名称，底层的类名为D$.
-object RDD2DataFrame { //向python学习
+
+object RDD2DataFrame {
   def main(args: Array[String]): Unit = {
     val spark = SparkSession.builder
       .master("local[*]")
