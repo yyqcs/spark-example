@@ -12,6 +12,7 @@ object RDD2DataFrame {
       .master("local[*]")
       .appName("RDD2DataFrame")
       .getOrCreate()
+    import spark.implicits._
 
     //RDD->DataFrame:表头+内容。
     //StructField(String name, DataType dataType, boolean nullable, Metadata metadata)
