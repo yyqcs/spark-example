@@ -24,13 +24,13 @@
 - [顶点与边的创建与操作](src/main/java/graphx/GraphxBasic.scala)
 - [顶点重要性度量 PageRank](src/main/java/graphx/PageRankUsage.scala)
 - [图的连通分量 connectedComponents](src/main/java/graphx/ConnectedComponentsUsage.scala)
-- [三角结构的数量 triangleCount]
+- [三角结构的数量 triangleCount](src/main/java/graphx/TriangleCountUsage.scala)
 
 ### 所用数据集
 代码中用到的数据集都可以在spark安装目录的data子目录中找到，具体为`xxx\spark-2.4.5-bin-hadoop2.7\data`
 ### 更多的用例
-完整的用例在spark安装目录的examples子目录中。具体为：
-`xxx\spark-2.4.5-bin-hadoop2.7\examples\src\main\scala\org\apache\spark\examples`
+完整的用例在spark安装目录的examples子目录中。
+具体为：`xxx\spark-2.4.5-bin-hadoop2.7\examples\src\main\scala\org\apache\spark\examples`
 
 ### Spark的视频学习资料
 推荐林子雨老师的慕课视频，质量高且免费，观看地址请[点击这儿](https://www.icourse163.org/course/XMU-1205811805)
