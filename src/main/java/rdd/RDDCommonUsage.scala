@@ -18,6 +18,8 @@ object RDDCommonUsage {
     var x=rdd1.map(x=>(x,1))
     x.reduceByKey((a,b)=>a+b)//有K,V=>K,V1;操作是针对value而言的，groupByKey也是针对value的
     rdd.flatMap(_.split(",")).map(word=>(word,1)).groupByKey().foreach(println)//K,V=>K,Iterable
+    x.groupByKey()
+    x.countByKey()
     //groupByKey只能生产一个序列，本身不能自定义函数，需要先用groupByKey生成RDD，然后再map。
     //而reduceByKey能够在本地先进行merge操作，并且merge操作可以通过函数自定义。
     x.sortByKey()
@@ -33,6 +35,7 @@ object RDDCommonUsage {
     rdd1.take(2)
     rdd1.reduce((a,b)=>a+b)
     rdd1.foreach(println)
+    rdd1.top(2)//top k 元素
 
     //实例
 

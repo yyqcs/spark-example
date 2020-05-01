@@ -22,7 +22,7 @@ object RDD2DataFrame {
     val rowsRDD = peopleRDD.map(_.split(",")).map(atrtibutes => Row(atrtibutes(0), atrtibutes(1).trim.toInt))
 
     val peopleDF = spark.createDataFrame(rowsRDD, schema)
-
+    peopleDF.explain(false)
     //for query
     peopleDF.createOrReplaceTempView("people")
     val res = spark.sql("SELECT name,age FROM people")
